@@ -108,13 +108,15 @@ public class ApplicationController {
 
     public static void getData() throws Exception {
         String res = http.get(api,"all");
-        System.out.println(res);
+        System.out.println("Ответ"+res);
 
         JsonObject base = gson.fromJson(res, JsonObject.class);
         JsonArray dataArr = base.getAsJsonArray("data");
+        System.out.println("Ответ"+dataArr);
 
         for (int i = 0; i < dataArr.size(); i++) {
             BookEntity newBook = gson.fromJson(dataArr.get(i).toString(), BookEntity.class);
+
             booksData.add(newBook);
         }
     }

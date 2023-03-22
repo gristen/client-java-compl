@@ -6,6 +6,7 @@ import edu.bip.client.entity.BookEntity;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -21,7 +22,7 @@ public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Application.class.getResource("view/main.fxml"));
-        AnchorPane mainApp = (AnchorPane) loader.load();
+        VBox mainApp = (VBox) loader.load();
         Scene scene = new Scene(mainApp);
         stage.setTitle("LibraryApp");
         stage.setScene(scene);
