@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bip.client.controller.ApplicationController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -59,7 +59,7 @@
             </TabPane>
             <AnchorPane layoutX="110.0" layoutY="32.0" prefHeight="368.0" prefWidth="490.0">
                <children>
-                  <TableView prefHeight="368.0" prefWidth="490.0">
+                  <TableView fx:id="tableBooks" prefHeight="368.0" prefWidth="490.0">
                     <columns>
                       <TableColumn fx:id="bookName" prefWidth="90.0" text="Название" />
                       <TableColumn fx:id="bookAuthor" prefWidth="77.0" text="Автор" />

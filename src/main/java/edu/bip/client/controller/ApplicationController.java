@@ -54,13 +54,13 @@ public class ApplicationController {
         tableBooks.setItems(booksData);
     }
 
-    @FXML
-    private void click_newBook() throws IOException {
-        BookEntity tempBook = new BookEntity();
-        booksData.add(tempBook);
-        Application.showPersonEditDialog(tempBook, booksData.size()-1);
-        addBook(tempBook);
-    }
+   // @FXML
+//    private void click_newBook() throws IOException {
+//        BookEntity tempBook = new BookEntity();
+//        booksData.add(tempBook);
+//        Application.showPersonEditDialog(tempBook, booksData.size()-1);
+//        addBook(tempBook);
+//    }
 
     @FXML
     private void click_removeBook() throws IOException {
@@ -94,17 +94,17 @@ public class ApplicationController {
     }
 
     @FXML
-    private void click_editBook() {
-        BookEntity selectedPerson = tableBooks.getSelectionModel().getSelectedItem();
-        if (selectedPerson != null) Application.showPersonEditDialog(selectedPerson, booksData.indexOf(selectedPerson));
-        else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Ничего не выбрано");
-            alert.setHeaderText("Отсутсвует выбраный пользователь!");
-            alert.setContentText("Пожалуйста, выберите пользователя из таблицы");
-            alert.showAndWait();
-        }
-    }
+//    private void click_editBook() {
+//        BookEntity selectedPerson = tableBooks.getSelectionModel().getSelectedItem();
+//        if (selectedPerson != null) Application.showPersonEditDialog(selectedPerson, booksData.indexOf(selectedPerson));
+//        else {
+//            Alert alert = new Alert(Alert.AlertType.WARNING);
+//            alert.setTitle("Ничего не выбрано");
+//            alert.setHeaderText("Отсутсвует выбраный пользователь!");
+//            alert.setContentText("Пожалуйста, выберите пользователя из таблицы");
+//            alert.showAndWait();
+//        }
+//    }
 
     public static void getData() throws Exception {
         String res = http.get(api,"all");
