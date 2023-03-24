@@ -3,22 +3,19 @@ package edu.bip.client.controller;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import edu.bip.client.Application;
 import edu.bip.client.entity.BookEntity;
 import edu.bip.client.utils.HTTPUtils;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 
-public class ApplicationController {
+public class BookController {
 
     public static String api = "http://localhost:2825/api/v1/book/";
     public static ObservableList<BookEntity> booksData = FXCollections.observableArrayList();
@@ -54,7 +51,7 @@ public class ApplicationController {
         tableBooks.setItems(booksData);
     }
 
-   // @FXML
+//    @FXML
 //    private void click_newBook() throws IOException {
 //        BookEntity tempBook = new BookEntity();
 //        booksData.add(tempBook);

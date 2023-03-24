@@ -1,13 +1,11 @@
 package edu.bip.client;
 
-import edu.bip.client.controller.ApplicationController;
+import edu.bip.client.controller.BookController;
 //import edu.bip.client.controller.EditBookController;
-import edu.bip.client.entity.BookEntity;
+//import edu.bip.client.controller.EditBookController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -27,7 +25,7 @@ public class Application extends javafx.application.Application {
         stage.setTitle("LibraryApp");
         stage.setScene(scene);
 
-        ApplicationController controller = loader.getController();
+        BookController controller = loader.getController();
         stage.show();
     }
 
